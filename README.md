@@ -1,6 +1,6 @@
 # Threat Hunter Lab
 
-[![Python CI](https://github.com/Mikario22/-threat-hunter-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/Mikario22/-threat-hunter-lab/actions/workflows/ci.yml)
+[![Python CI](https://github.com/Mikario22/threat-hunter-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/Mikario22/threat-hunter-lab/actions/workflows/ci.yml)
 
 An **offline, explainable defensive threat-hunting engine** built as a personal engineering portfolio project. It consumes strictly validated **synthetic identity events**, correlates behavior over time, and produces evidence-backed findings for human review. No cloud, network, secrets, company logs, or external AI calls are required.
 

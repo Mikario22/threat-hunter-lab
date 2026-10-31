@@ -1,0 +1,14 @@
+{
+  "windows": [
+    {
+      "policy_id": "APPROVED-SYNTH-01",
+      "account": "synthetic-analyst",
+      "source_ip": "198.51.100.41",
+      "host": "desktop-lab",
+      "from": "2026-10-30T23:30:00+02:00",
+      "until": "2026-10-30T23:59:00+02:00",
+      "ticket": "CHG-SYN-100",
+      "approved_by": "synthetic-reviewer"
+    }
+  ]
+}

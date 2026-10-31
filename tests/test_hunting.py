@@ -93,7 +93,7 @@ class HuntingTests(unittest.TestCase):
     def test_ids_stable_across_reordered_inputs(self):
         events = parse_events(SAMPLE)
         a = {f.finding_id for f in hunt(events)}
-        b = {f.finding_id for f in hunt(list(reversed(events))}
+        b = {f.finding_id for f in hunt(list(reversed(events)))}
         self.assertEqual(a, b)
 
     def test_evidence_ids_all_trace_to_input(self):

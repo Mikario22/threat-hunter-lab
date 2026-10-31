@@ -269,6 +269,8 @@ def load_approved_windows(path: str | Path) -> tuple[ApprovedWindow, ...]:
         if any(not isinstance(item[key], str) or not item[key].strip() or len(item[key]) > 256
                for key in required):
             raise ValueError("policy fields must be nonempty bounded strings")
+        if any("*" in item[key] for key in ("account", "source_ip", "host")):
+            raise ValueError("invalid policy scope: wildcards are prohibited")
         if item["policy_id"] in ids:
             raise ValueError("duplicate policy_id")
         ids.add(item["policy_id"])

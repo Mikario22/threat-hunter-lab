@@ -87,7 +87,7 @@ class BehaviorTests(unittest.TestCase):
         self.assertEqual(a, b)
 
     def test_training_future_event_rejected_not_leaked(self):
-        late = replace(self.training[0], timestamp=CUTOFF + timedelta(minutes=1))
+        late = replace(self.training[0], event_id="FUTURE", timestamp=CUTOFF + timedelta(minutes=1))
         with self.assertRaisesRegex(ValueError, "leak"):
             build_profiles([*self.training, late], cutoff=CUTOFF)
 

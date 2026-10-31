@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "threat-hunter-lab"
+version = "0.1.0"
+description = "Explainable, offline threat hunting for synthetic identity and admin events"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+threat-hunter = "threat_hunter_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
